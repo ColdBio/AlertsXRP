@@ -3,7 +3,7 @@ This simple twitter bot that tweets key metrics about XRPs market performance ev
 - Current price in 🇺🇸 🇬🇧 🇪🇺 🇨🇳 currencies
 - 24 hour high
 - 24 hour low
-- 2 hour percent change
+- 24 hour percent change
 - Volume: is the total trading volume of a cryptoasset across all active cryptoasset exchanges tracked by CoinGecko. [[1]](https://www.coingecko.com/en/faq)
 
 ## Short Case
