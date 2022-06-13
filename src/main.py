@@ -5,8 +5,8 @@ import requests
 import schedule
 from datetime import datetime
 
-auth = tweepy.OAuth1UserHandler("{}", "{}")
-auth.set_access_token("{}", "{}")
+auth = tweepy.OAuth1UserHandler("{}", "{}") # Add your own api credentials here
+auth.set_access_token("{}", "{}") # Add your own api credentials here
 tweepy.OAuth1UserHandler
 api = tweepy.API(auth)
 
@@ -46,14 +46,26 @@ def call():
 Market Performance in 🇺🇸
 → 📈 24h-High: ${daily_high}
 → 📉 24h-Low: ${daily_low}
-→ 🔃   24h-% Change: {daily_percent_change}%
+→ 🔃   24h-% Change: {daily_percent_change}% 
 → 🌊 Volume: ${daily_volume}
-UTC DateTime: {utc_time_date}
 #XRP #XRPCommunity #XRPHolders
 """
+
+        image_text = f"""
+        24 hour Price Change
+        ${xrp_usd}
+        """
+        img = Image.open("base_image.png")
+        draw = ImageDraw.Draw(img)
+        font = ImageFont.truetype("Futura.ttc", 65)
+        draw.text((160, 90),f"${xrp_usd}",(255,255,255),font=font)
+        img.save('image_to_tweet.png')
+        image_to_tweet = "image_to_tweet.png"
         time.sleep(10800)
-        api.update_status(tweet)
+        media = api.media_upload("image_to_tweet.png")
+        api.update_status(status=tweet, media_ids=[media.media_id])
+        print("Tweeted")
+        
 
 while True:
-    schedule.every(3).hours.do(call)
-    schedule.run_pending()
+        call()
