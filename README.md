@@ -13,7 +13,7 @@ Commingling my private account and the price alert account was not idea so I fir
 Once I was able to send out tweets, it was easy to attach market data and an Image to every tweet. One issue had somewhat of a difficulty was overlaying the price to an image and making sure it was aligned properly. Other than that this project was not too difficult. For the future, I could change the core functionality of sending out tweets every three hours to sending out a tweet based on some market condition that is met, for example, if the price changed by 15% in the last 30 minutes.
 
 ## Example
-[Here](https://twitter.com/AlertsXrp/status/1536368329774211073?s=20&t=5b8NnWMvdHPnCin_oan1og) the the direct link to the tweet displayed above
+[Here](https://twitter.com/AlertsXrp/status/1536368329774211073?s=20&t=5b8NnWMvdHPnCin_oan1og) the the direct link to the tweet displayed below
 
 ![Screenshot 2022-06-13 at 16 45 35](https://user-images.githubusercontent.com/64978825/173392815-0443e0e1-a90c-4d4d-9c96-7fd7f9eb1465.png)
 
